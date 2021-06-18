@@ -2,6 +2,7 @@
 layout: post
 title: "Chart Remake"
 categories: data-science datavis
+author: alex
 ---
 Since May I’ve been reading and following along with Joel Grus’ _Data Science From Scratch_. One of the first things we learn in this book is how to make charts in Python with matplotlib.
 

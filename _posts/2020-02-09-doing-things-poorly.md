@@ -3,6 +3,7 @@ layout: post
 title: Doing Things Poorly
 categories: personal
 date: 2020-02-09 14:10:22
+author: alex
 ---
 In the spirit of 2020 being a kick-ass year for me, I've decided to re-start this blog. 
 
