@@ -29,7 +29,7 @@ github_username:  alexshepard
 
 # Build settings
 #theme: minima
-remote_theme: midzer/urban-theme
+#remote_theme: midzer/urban-theme
 plugins:
   - jekyll-feed
 
