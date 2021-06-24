@@ -2,7 +2,7 @@
 layout: post
 title: Swift UI Project 2, Day 2
 categories: swift
-date: 2021-06-23 19::53
+date: 2021-06-23 23:19
 author: alex
 tags: swift swiftui
 ---
