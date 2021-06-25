@@ -7,7 +7,7 @@ author: alex
 tags: swift swiftui
 ---
 
-Iidn't sleep well last night - lingering pain from the dentist yesterday, and I also just don't really sleep anymore.
+I didn't sleep well last night - lingering pain from the dentist yesterday, and I also just don't really sleep anymore.
 
 However, this morning I did get a early crack at [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui), wrapping up the GuessTheFlag tutorial and doing a few challenges. Nothing new to me in SwiftUI today.
 
