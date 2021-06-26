@@ -13,7 +13,7 @@ My favorite part of it was that I got to use my new knowledge to make a custom S
 
 ```swift
 struct SwallowtailShape: Shape {
-    var cutPercentage: CGFloat
+    let cutPercentage: CGFloat
     
     init(cutPercentage: CGFloat = 0.15) {
         self.cutPercentage = cutPercentage
