@@ -13,8 +13,8 @@ The most interesting bit of the challenges for Project 5 was calculating the sco
 
 ```swift
 private var score: Int {
-    return usedWords.reduce(0, { x, y in
-        x + y.count
+    return usedWords.reduce(0, { sum, word in
+        sum + word.count
     })
 }
 ```
