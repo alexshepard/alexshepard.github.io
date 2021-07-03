@@ -21,5 +21,5 @@ private var score: Int {
 
 where usedWords is an array of Strings.
 
-I also immediately wanted to add a persistent high scores function to this app. I'm sure we'll be getting to data persistence with Core Data or I suppose wrapping UserDefaults eventually, so I'll just made a non-persistent version for now, with an `@EnvironmentObject` that gets created by our game's `ContentView` and stuffed into the environment with the `.environmentObject()` modifier. Then all we have to do is keep it up to date as the user plays the game and read it out of the environment in our high score list if the user presents that sheet. Fun!
+I also immediately wanted to add a persistent high scores function to this app. I'm sure we'll be getting to data persistence with Core Data or I suppose wrapping UserDefaults eventually, so I just made a non-persistent version for now, with an `@EnvironmentObject` that gets created by our game's `ContentView` and stuffed into the environment with the `.environmentObject()` modifier. Then all we have to do is keep it up to date as the user plays the game and read it out of the environment in our high score list if the user presents that sheet. Fun!
 
