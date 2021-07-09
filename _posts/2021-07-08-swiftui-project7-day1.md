@@ -7,13 +7,13 @@ author: alex
 tags: swift swiftui
 ---
 
-Late night tonight. I didn't get a session of [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui) between everything else that was going on, so I started it near midnight.
+Late night tonight. I didn't get to a session of [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui) with everything else that was going on, so I started it near midnight.
 
-I've used @ObservableObject before, but I'm not sure I totally understood what made it different from a @State struct, despite the obvious difference implied in the name (one's a reference type, one's a value type). It was good to go over it in a little more detail.
+I'd used the `@ObservableObject` property wrapper before, but I'm not sure I totally understood what made it different from `@State`, despite the obvious difference implied in the name (one wraps reference types, one wraps value types). It was good to go over why you'd use `@ObservableObject` in a little more detail.
 
-A few other interesting things that were new to me:
-- I hadn't come across closing a sheet with `presentationMode` before,
-- I hadn't used UserDefaults in SwiftUI before, and
-- I've used Codable a lot with network JSON but I hadn't used it with UserDefaults.
+A few other things that were new to me:
+- I hadn't come across closing a sheet with `@Environment(\.presentationMode)`,
+- I hadn't used UserDefaults in SwiftUI, and
+- I've used Codable a fair bit with network JSON but I hadn't used it with UserDefaults.
 
-All together a nice list of bits and bobs, a few of whihch I'll be migrating into my SwiftUI rewrite of iNat shortly. That's coming along nicely, by the way, I got login working with Apple's AuthenticationServices which I hadn't used before, and got started on a camera / new observation flow.
+All together a nice list of bits and bobs, a few of whihch I'll be migrating into my SwiftUI rewrite of iNat straight away. That's coming along nicely, by the way, I got login working with Apple's AuthenticationServices which I hadn't used before, and got started on a camera / new observation flow.
