@@ -2,7 +2,7 @@
 layout: post
 title: More Work with Codable
 categories: swift
-date: 2021-07-11 15:55
+date: 2021-07-12 17:20
 author: alex
 tags: swift swiftui generative-art
 ---
