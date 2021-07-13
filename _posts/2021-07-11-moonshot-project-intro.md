@@ -4,7 +4,7 @@ title: Moonshot Project Intro
 categories: swift
 date: 2021-07-11 15:55
 author: alex
-tags: swift swiftui
+tags: swift swiftui generative-art
 ---
 
 Man, it's ups and downs all week. I'm mentally doing well but struggling physically today. Happily, I've stuck with [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui) and gotten another day done.
