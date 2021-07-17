@@ -11,7 +11,7 @@ More [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui) done to
 
 I don't think I'll have much use for `ImagePaint` or even-odd fills (except for debugging), but `CGAffineTransform` and `.drawingGroup()` will definitely be a part of my toolkit going forward. I still have yet to watch the WWDC video on `Canvas` - [Add rich graphics to your SwiftUI app](https://developer.apple.com/videos/play/wwdc2021/10021/) - so I'll try to get to that over the weekend.
 
-Meanwhile, I implemented another sketch in Swift/SwiftUI from the [Generative Design book](http://www.generative-gestaltung.de/2/) today, Color Palettes from Images. After re-implementing the p5js sketch in Swift, I kept going with the idea and wired up the camera to it, processing frames from the camera and then sorting pixels by hsb values. Here's a self-portrait, with sampled pixels sorted by brightness.
+Meanwhile, I implemented another sketch in Swift/SwiftUI from the [Generative Design book](http://www.generative-gestaltung.de/2/) today, Color Palettes from Images. After re-implementing the p5js sketch in Swift, I kept going with the idea and wired up the camera to it, processing frames from the camera and then sorting pixels by hsb values. Here's a self-portrait, with sampled colors sorted by brightness.
 
 ![Self Portait, pixels sorted by brightness](/assets/self_portrait_brightness.jpeg)
 
