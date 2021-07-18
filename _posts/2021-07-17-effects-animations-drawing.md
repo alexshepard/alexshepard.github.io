@@ -5,6 +5,7 @@ categories: swift
 date: 2021-07-17 19:15
 author: alex
 tags: swift swiftui generative-art
+image: /assets/spiro_stride.png
 ---
 
 A bit more [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui) finished today. 

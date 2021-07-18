@@ -5,6 +5,7 @@ categories: swift
 date: 2021-07-12 17:20
 author: alex
 tags: swift swiftui generative-art
+image: /assets/color_spectrum_grid.png
 ---
 
 Yay, another easy day of [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui)! I'm on day 40, that seems like a lot of days.

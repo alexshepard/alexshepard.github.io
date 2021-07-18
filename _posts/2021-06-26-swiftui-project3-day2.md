@@ -5,6 +5,7 @@ categories: swift
 date: 2021-06-26 8:36
 author: alex
 tags: swift swiftui
+image: /assets/swallowtail.png
 ---
 
 Another day of [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui) today, basically applying the fundamentals we learned about yesterday.

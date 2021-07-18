@@ -5,6 +5,7 @@ categories: swift
 date: 2021-07-16 22:58
 author: alex
 tags: swift swiftui generative-art
+image: /assets/self_portrait_brightness.jpeg
 ---
 
 More [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui) done today. I've used `CGAffineTransform` a little bit, but I'm still not really comfortable with 2d transforms (much less 3d). I guess if I wanna do a lot of drawing with code, I'll have to get comfortable with this.
