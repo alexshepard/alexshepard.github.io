@@ -27,7 +27,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://alexshepard.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  alexshepard
 
-paginate: 10
+paginate: 9
 paginate_path: page:num/
 
 # Build settings
