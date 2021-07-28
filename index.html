@@ -5,13 +5,20 @@ entries_layout: grid
 
 
 {% for post in paginator.posts %}
+  {% if post.image %}
     <a href="{{ post.url }}">
-      {% if post.image %}
         <img src = {{ post.image }} class="sml_image" />
-      {% else %}
+      </a>
+  {% else %}
+  <a href="{{ post.url }}">
+
+  <div style="border: 3px solid #000; display: inline-block; width: 250px; height: 120px;">
+
         {{ post.title }}
+</div>
+</a>
+
       {% endif %}
-    </a>
 {% endfor %}
 
 {% if paginator.total_pages > 1 %}
