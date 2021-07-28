@@ -9,7 +9,7 @@ entries_layout: grid
       {% if post.image %}
         <img src = {{ post.image }} class="sml_image" />
       {% else %}
-        <h3>{{ post.title }} - {{ post.date | date_to_string }}</h3>
+        {{ post.title }}
       {% endif %}
     </a>
 {% endfor %}
