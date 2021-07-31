@@ -43,8 +43,8 @@ extension Path {
                     y2 = rect.maxY
                 }
                 let end = CGPoint(x: x2, y: y2)
-                self.move(to: origin)
-                self.addLine(to: end)
+                move(to: origin)
+                addLine(to: end)
             }
         }
     }
