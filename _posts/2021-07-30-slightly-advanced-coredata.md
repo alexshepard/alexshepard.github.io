@@ -53,4 +53,4 @@ extension Path {
 }
 ```
 
-![Complex modules](/assets/line_modules.png)
+![Line modules](/assets/line_modules.png)
