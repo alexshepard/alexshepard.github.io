@@ -2,7 +2,7 @@
 layout: post
 title: BucketList Challenges
 categories: swift
-date: 2021-08-19 18:15:38
+date: 2021-08-20 14:08:24
 author: alex
 tags: swift swiftui generative-art
 image: /assets/rects.png

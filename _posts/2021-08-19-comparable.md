@@ -2,7 +2,7 @@
 layout: post
 title: Comparable
 categories: swift
-date: 2021-08-20 14:08:24
+date: 2021-08-19 18:15:38
 author: alex
 tags: swift swiftui generative-art
 image: /assets/moire_circle.png
