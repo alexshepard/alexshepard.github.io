@@ -2,7 +2,7 @@
 layout: post
 title: Accessibility Challenges
 categories: swift
-date: 2021-08-22 19:27:12
+date: 2021-08-22 20:21:15
 author: alex
 tags: swift swiftui generative-art
 image: /assets/drag_moire_noise.png
