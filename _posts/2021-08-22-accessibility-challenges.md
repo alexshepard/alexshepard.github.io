@@ -5,7 +5,7 @@ categories: swift
 date: 2021-08-22 19:27:12
 author: alex
 tags: swift swiftui generative-art
-image: /assets/drag_moire.png
+image: /assets/drag_moire_noise.png
 ---
 
 Another day of [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui) wrapped up today. I'm at day 75, and I'm already starting to think about what to work on next. I'm trying to decide between Tensorflow, SpriteKit & Metal, or maybe ARKit. I suppose I need to learn all 3 to get where I'm going, so I should just pick one and dive in. I'll get the most mileage for work out of a Tensorflow challenge, but I think I'll get the furthest drawing-wise out of a SpriteKit & Metal one.
@@ -14,4 +14,4 @@ The accessibility challenges were pretty simple today, except that the Xcode Bet
 
 Today's image is from yet another moire sketch, from the [Generative Design book](http://www.generative-gestaltung.de/2/). This time adding blend modes to make it more interesting.
 
-![Tap Moire](/assets/drag_moire.png)
+![Tap Moire](/assets/drag_moire_noise.png)
