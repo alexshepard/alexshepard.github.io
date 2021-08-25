@@ -14,4 +14,4 @@ The accessibility challenges were pretty simple today, except that the Xcode Bet
 
 Today's image is from yet another moire sketch, from the [Generative Design book](http://www.generative-gestaltung.de/2/). This time adding blend modes to make it more interesting.
 
-![Tap Moire](/assets/drag_moire_noise.png)
+![Noisy Drag Moire](/assets/drag_moire_noise.png)
