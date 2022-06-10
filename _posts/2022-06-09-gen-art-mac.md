@@ -5,7 +5,7 @@ categories: swift
 date: 2022-06-09 17:16:01
 author: alex
 tags: swift swiftui generative-art
-image: /assets/buckeye.jpg
+image: /assets/spectrum_glitch.png
 ---
 
 OK, back at the generative art stuff, working in Xcode 14 beta for MacOS. Very fun to be making SwiftUI apps with Canvas & Stuff again. I'm also up to day 33 on [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui) again, animations and stuff. And I'm also getting back into the Japanese grind, 日本語 yay.
