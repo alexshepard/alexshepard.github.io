@@ -1,30 +1,130 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>Alex's Blog : iNaturalist Observations US States Chart Race</title>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="https://alexshepard.github.io/theme/css/main.css" type="text/css" />
-        <link href="https://alexshepard.github.io/None" type="application/atom+xml" rel="alternate" title="Alex's Blog ATOM Feed" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
 
-        <!--[if IE]>
-                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-        <!--[if lte IE 7]>
-                <link rel="stylesheet" type="text/css" media="all" href="https://alexshepard.github.io/css/ie.css"/>
-                <script src="https://alexshepard.github.io/js/IE8.js" type="text/javascript"></script><![endif]-->
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
 
-        <!--[if lt IE 7]>
-                <link rel="stylesheet" type="text/css" media="all" href="https://alexshepard.github.io/css/ie6.css"/><![endif]-->
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="/theme/pygments/github.min.css">
+
+
+
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/solid.css">
+
+
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#333">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#333">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Microsoft EDGE -->
+  <meta name="msapplication-TileColor" content="#333">
+
+
+
+
+ 
+
+<meta name="author" content="alex" />
+<meta name="description" content="const w = 800; const h = 800; const padding = 30; const appViz = d3.select(&#34;#app&#34;) .append(&#34;svg&#34;) .attr(&#34;width&#34;, w) .attr(&#34;height&#34;, h); const chart = appViz.append(&#34;g&#34;); const xaxisGroup = appViz.append(&#34;g&#34;); const chartLabels = appViz.append(&#34;g&#34;); const titleGroup = appViz.append(&#34;g&#34;); const epochParser = d3.timeParse(&#34;%Q&#34;); const formatMonth = d3 …" />
+<meta name="keywords" content="d3, inat, javascript">
+
+
+  <meta property="og:site_name" content="Alex's Blog"/>
+  <meta property="og:title" content="iNaturalist Observations US States Chart Race"/>
+  <meta property="og:description" content="const w = 800; const h = 800; const padding = 30; const appViz = d3.select(&#34;#app&#34;) .append(&#34;svg&#34;) .attr(&#34;width&#34;, w) .attr(&#34;height&#34;, h); const chart = appViz.append(&#34;g&#34;); const xaxisGroup = appViz.append(&#34;g&#34;); const chartLabels = appViz.append(&#34;g&#34;); const titleGroup = appViz.append(&#34;g&#34;); const epochParser = d3.timeParse(&#34;%Q&#34;); const formatMonth = d3 …"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:url" content="/inaturalist-observations-us-states-chart-race.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2022-11-27 22:12:03-08:00"/>
+  <meta property="article:modified_time" content=""/>
+  <meta property="article:author" content="/author/alex.html">
+  <meta property="article:section" content="datavis"/>
+  <meta property="article:tag" content="d3"/>
+  <meta property="article:tag" content="inat"/>
+  <meta property="article:tag" content="javascript"/>
+  <meta property="og:image" content="/images/alex_pixel_avatar.jpg">
+
+  <title>Alex's Blog &ndash; iNaturalist Observations US States Chart Race</title>
+
 
 </head>
+<body class="light-theme">
 
-<body>
-        
-<header>
-    <h1><a href="https://alexshepard.github.io" id="site-title">Alex's Blog </a> :
-        <a href="https://alexshepard.github.io/inaturalist-observations-us-states-chart-race.html" id="page-title">iNaturalist Observations US States Chart Race</a></h1>
-<time datetime="2022-11-27T22:12:03-08:00">Sun 27 November 2022</time></header>
-<article>
+<aside>
+  <div>
+    <a href="/">
+      <img src="/images/alex_pixel_avatar.jpg" alt="Alex" title="Alex">
+    </a>
+
+    <h1>
+      <a href="/">Alex</a>
+    </h1>
+
+    <p>Machine Learning, Art, and other stuff</p>
+
+
+    <nav>
+      <ul class="list">
+
+
+
+          <li>
+            <a target="_self" href="https://www.inaturalist.org/users/alexshepard" >inat</a>
+          </li>
+      </ul>
+    </nav>
+
+    <ul class="social">
+      <li>
+        <a class="sc-github"
+           href="https://github.com/alexshepard/"
+           target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</aside>
+  <main>
+
+<nav>
+  <a href="/">Home</a>
+
+  <a href="/archives.html">Archives</a>
+  <a href="/categories.html">Categories</a>
+  <a href="/tags.html">Tags</a>
+
+
+</nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="inaturalist-observations-us-states-chart-race">iNaturalist Observations US States Chart Race</h1>
+    <p>
+      Posted on Sun 27 November 2022 in <a href="/category/datavis.html">datavis</a>
+
+    </p>
+  </header>
+
+
+  <div>
     <script src="https://d3js.org/d3.v7.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/d3-array@3"></script>
 <script src="https://cdn.jsdelivr.net/npm/d3-time@3"></script>
@@ -251,17 +351,37 @@ const main = async () => {
 main();
 
 </script>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="/tag/d3.html">d3</a>
+      <a href="/tag/inat.html">inat</a>
+      <a href="/tag/javascript.html">javascript</a>
+    </p>
+  </div>
+
+
+
+
+
+
 </article>
 
-        <footer>
-            <nav>
-                <ul>
-                    <li>:: <a href="https://alexshepard.github.io/categories.html">Categories</a></li>
-                    <li>:: <a href="https://alexshepard.github.io/tags.html">Tags</a></li>
-                </ul>
-            </nav>
-                <p id="theme-credit"><a href="http://mathieu.agopian.info/mnmlist/theme.html">Thème mnmlist</a></p>
-        </footer>
+<footer>
+<p>&copy; 2024 </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p></footer>  </main>
 
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Alex's Blog ",
+  "url" : "",
+  "image": "/images/alex_pixel_avatar.jpg",
+  "description": ""
+}
+</script>
 </body>
 </html>
