@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Alex's Blog : Swift UI Project 3, Day 2</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="https://alexshepard.github.io/theme/css/main.css" type="text/css" />
+        <link href="https://alexshepard.github.io/None" type="application/atom+xml" rel="alternate" title="Alex's Blog ATOM Feed" />
+
+        <!--[if IE]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <!--[if lte IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="https://alexshepard.github.io/css/ie.css"/>
+                <script src="https://alexshepard.github.io/js/IE8.js" type="text/javascript"></script><![endif]-->
+
+        <!--[if lt IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="https://alexshepard.github.io/css/ie6.css"/><![endif]-->
+
+</head>
+
+<body>
+        
+<header>
+    <h1><a href="https://alexshepard.github.io" id="site-title">Alex's Blog </a> :
+        <a href="https://alexshepard.github.io/swift-ui-project-3-day-2.html" id="page-title">Swift UI Project 3, Day 2</a></h1>
+<time datetime="2021-06-26T08:36:00-07:00">Sat 26 June 2021</time></header>
+<article>
+    <p>Another day of <a href="https://www.hackingwithswift.com/100/swiftui">100 Days of SwiftUI</a> today, basically applying the fundamentals we learned about yesterday.</p>
+<p>My favorite part of it was that I got to use my new knowledge to make a custom Shape for .clipShape for a side project at work. I need a way to clip a view/color to a flag shape, and specifically to a [Swallowtail](https://en.wikipedia.org/wiki/Swallowtail_(flag) flag shape.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">struct</span> <span class="nc">SwallowtailShape</span><span class="p">:</span> <span class="n">Shape</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nv">cutPercentage</span><span class="p">:</span> <span class="n">CGFloat</span>
+
+    <span class="kd">init</span><span class="p">(</span><span class="n">cutPercentage</span><span class="p">:</span> <span class="n">CGFloat</span> <span class="p">=</span> <span class="mf">0.15</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">cutPercentage</span> <span class="p">=</span> <span class="n">cutPercentage</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">path</span><span class="p">(</span><span class="k">in</span> <span class="n">rect</span><span class="p">:</span> <span class="n">CGRect</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">Path</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nv">path</span> <span class="p">=</span> <span class="n">Path</span><span class="p">()</span>
+
+        <span class="n">path</span><span class="p">.</span><span class="n">move</span><span class="p">(</span><span class="n">to</span><span class="p">:</span> <span class="n">CGPoint</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">rect</span><span class="p">.</span><span class="n">minX</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">rect</span><span class="p">.</span><span class="n">minY</span><span class="p">))</span>
+        <span class="n">path</span><span class="p">.</span><span class="n">addLine</span><span class="p">(</span><span class="n">to</span><span class="p">:</span> <span class="n">CGPoint</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">rect</span><span class="p">.</span><span class="n">maxX</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">rect</span><span class="p">.</span><span class="n">minY</span><span class="p">))</span>
+        <span class="n">path</span><span class="p">.</span><span class="n">addLine</span><span class="p">(</span><span class="n">to</span><span class="p">:</span> <span class="n">CGPoint</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">rect</span><span class="p">.</span><span class="n">maxX</span> <span class="o">-</span> <span class="p">(</span><span class="n">rect</span><span class="p">.</span><span class="n">maxX</span> <span class="o">*</span> <span class="n">cutPercentage</span><span class="p">),</span> <span class="n">y</span><span class="p">:</span> <span class="n">rect</span><span class="p">.</span><span class="n">midY</span><span class="p">))</span>
+        <span class="n">path</span><span class="p">.</span><span class="n">addLine</span><span class="p">(</span><span class="n">to</span><span class="p">:</span> <span class="n">CGPoint</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">rect</span><span class="p">.</span><span class="n">maxX</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">rect</span><span class="p">.</span><span class="n">maxY</span><span class="p">))</span>
+        <span class="n">path</span><span class="p">.</span><span class="n">addLine</span><span class="p">(</span><span class="n">to</span><span class="p">:</span> <span class="n">CGPoint</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">rect</span><span class="p">.</span><span class="n">minX</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">rect</span><span class="p">.</span><span class="n">maxY</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">path</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">struct</span> <span class="nc">ContentView</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+        <span class="n">Color</span><span class="p">.</span><span class="n">green</span>
+            <span class="p">.</span><span class="n">frame</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mi">100</span><span class="p">)</span>
+            <span class="p">.</span><span class="n">clipShape</span><span class="p">(</span><span class="n">SwallowtailShape</span><span class="p">())</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>And voila:</p>
+<p><img alt="Swallowtail Flag" src="/images/swallowtail.png"></p>
+</article>
+
+        <footer>
+            <nav>
+                <ul>
+                    <li>:: <a href="https://alexshepard.github.io/categories.html">Categories</a></li>
+                    <li>:: <a href="https://alexshepard.github.io/tags.html">Tags</a></li>
+                </ul>
+            </nav>
+                <p id="theme-credit"><a href="http://mathieu.agopian.info/mnmlist/theme.html">Thème mnmlist</a></p>
+        </footer>
+
+</body>
+</html>

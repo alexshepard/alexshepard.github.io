@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Alex's Blog : Swift Operators & Conditions</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="https://alexshepard.github.io/theme/css/main.css" type="text/css" />
+        <link href="https://alexshepard.github.io/None" type="application/atom+xml" rel="alternate" title="Alex's Blog ATOM Feed" />
+
+        <!--[if IE]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <!--[if lte IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="https://alexshepard.github.io/css/ie.css"/>
+                <script src="https://alexshepard.github.io/js/IE8.js" type="text/javascript"></script><![endif]-->
+
+        <!--[if lt IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="https://alexshepard.github.io/css/ie6.css"/><![endif]-->
+
+</head>
+
+<body>
+        
+<header>
+    <h1><a href="https://alexshepard.github.io" id="site-title">Alex's Blog </a> :
+        <a href="https://alexshepard.github.io/swift-operators-conditions.html" id="page-title">Swift Operators & Conditions</a></h1>
+<time datetime="2020-02-11T11:35:00-08:00">Tue 11 February 2020</time></header>
+<article>
+    <p>Onward to day 3 of <a href="https://www.hackingwithswift.com/100">100 Days of Swift</a>!</p>
+<p>Just a few tidbits today. First of all, I'd forgotten about the <code>fallthrough</code> keyword in a <code>switch</code> statement. I guess I understand the intent here, people forget to use <code>break</code> all the time. However, it seems like every other language's <code>switch</code> statement uses the less safe but more consistent behavior of falling through unless you use <code>break</code>. If your implementation is technically safer but differs from every other implementation in the world, is it really better? On the other hand, "...because that's how it's always been done" is a crap answer to the legitimate question "why is every <code>switch</code> statement in the programming world so error prone?"</p>
+<p>I'd also forgotten about the very convenient range operators in Swift.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nv">newbieObsRange</span> <span class="p">=</span> <span class="mf">0.</span><span class="p">.&lt;</span><span class="mi">10</span>
+<span class="kd">let</span> <span class="nv">journeyObsRange</span> <span class="p">=</span> <span class="mf">10.</span><span class="p">.&lt;</span><span class="mi">1000</span>
+<span class="kd">let</span> <span class="nv">powerUserRange</span> <span class="p">=</span> <span class="mf">1000.</span><span class="p">..</span><span class="mi">9000</span>
+
+<span class="k">switch</span> <span class="n">userObsCount</span> <span class="p">{</span>
+<span class="k">case</span> <span class="n">newbieObsRange</span><span class="p">:</span>
+    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Welcome!&quot;</span><span class="p">)</span>
+<span class="k">case</span> <span class="n">journeyObsRange</span><span class="p">:</span>
+    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Welcome back!&quot;</span><span class="p">)</span>
+<span class="k">case</span> <span class="n">powerUserRange</span><span class="p">:</span>
+    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Hey there big observer!&quot;</span><span class="p">)</span>
+<span class="k">default</span><span class="p">:</span>
+    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;It&#39;s over 9000!&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Finally, I noticed an annoyance with the Swift Playgrounds app on my iPad. Why does the text editor not know how to indent a <code>switch</code> statement?</p>
+</article>
+
+        <footer>
+            <nav>
+                <ul>
+                    <li>:: <a href="https://alexshepard.github.io/categories.html">Categories</a></li>
+                    <li>:: <a href="https://alexshepard.github.io/tags.html">Tags</a></li>
+                </ul>
+            </nav>
+                <p id="theme-credit"><a href="http://mathieu.agopian.info/mnmlist/theme.html">Thème mnmlist</a></p>
+        </footer>
+
+</body>
+</html>

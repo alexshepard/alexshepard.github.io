@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Alex's Blog : Closures, part 1</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="https://alexshepard.github.io/theme/css/main.css" type="text/css" />
+        <link href="https://alexshepard.github.io/None" type="application/atom+xml" rel="alternate" title="Alex's Blog ATOM Feed" />
+
+        <!--[if IE]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <!--[if lte IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="https://alexshepard.github.io/css/ie.css"/>
+                <script src="https://alexshepard.github.io/js/IE8.js" type="text/javascript"></script><![endif]-->
+
+        <!--[if lt IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="https://alexshepard.github.io/css/ie6.css"/><![endif]-->
+
+</head>
+
+<body>
+        
+<header>
+    <h1><a href="https://alexshepard.github.io" id="site-title">Alex's Blog </a> :
+        <a href="https://alexshepard.github.io/closures-part-1.html" id="page-title">Closures, part 1</a></h1>
+<time datetime="2020-02-14T09:22:20-08:00">Fri 14 February 2020</time></header>
+<article>
+    <p>Today I'm continuing to day 6 of <a href="https://www.hackingwithswift.com/100">100 Days of Swift</a>. Today we're back on closures. I use closures a lot in Swift and Objective-C, but mostly by recipe. This recipe/copypasta code is exactly what I'm trying to get past with 100 Days of Swift, so let's dig in.</p>
+<p>I noticed today that the basic closure syntax <code>() -&gt; Void</code> literally means "takes an empty tuple of arguments and returns nothing." It's not magic syntax, it's actually got meaning. Funny how that never really occurred to me before.</p>
+<p>Also something to note is that while functions take parameter labels, closures do not. </p>
+<p>Finally, trailing closure syntax is pretty elegant and cool.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">uploadObservation</span><span class="p">(</span><span class="n">taxon</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">uploadProgress</span><span class="p">:</span> <span class="p">(</span><span class="nb">Double</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nv">pctDone</span><span class="p">:</span> <span class="nb">Double</span> <span class="p">=</span> <span class="mi">0</span>
+    <span class="k">repeat</span> <span class="p">{</span>
+        <span class="n">uploadProgress</span><span class="p">(</span><span class="n">pctDone</span><span class="p">)</span>
+        <span class="n">pctDone</span> <span class="o">+=</span> <span class="mf">0.1</span>
+    <span class="p">}</span> <span class="k">while</span> <span class="n">pctDone</span> <span class="o">&lt;</span> <span class="mi">1</span>
+<span class="p">}</span>
+
+<span class="n">uploadObservation</span><span class="p">(</span><span class="n">taxon</span><span class="p">:</span> <span class="s">&quot;Boletus rubriceps&quot;</span><span class="p">)</span> <span class="p">{</span> <span class="n">pctDone</span> <span class="k">in</span>
+    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;upload progress is </span><span class="si">\(</span><span class="n">pctDone</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+
+    <span class="n">DispatchQueue</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="k">async</span> <span class="p">{</span>
+        <span class="c1">// update a progress bar</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Finally, today's annoyance: why don't print statements inside closures show up as string output in the Swift Playgrounds for iPad output viewer? It makes debugging hard. The lack of a console output viewer is frustrating in Playgrounds , debugging order of operations is basically impossible.</p>
+<p>Also, related to my complaint about Ulysses auto-capitalizing text in code blocks: why does Ulysses autocorrect spelling in code blocks? </p>
+<p>Test edit</p>
+</article>
+
+        <footer>
+            <nav>
+                <ul>
+                    <li>:: <a href="https://alexshepard.github.io/categories.html">Categories</a></li>
+                    <li>:: <a href="https://alexshepard.github.io/tags.html">Tags</a></li>
+                </ul>
+            </nav>
+                <p id="theme-credit"><a href="http://mathieu.agopian.info/mnmlist/theme.html">Thème mnmlist</a></p>
+        </footer>
+
+</body>
+</html>
